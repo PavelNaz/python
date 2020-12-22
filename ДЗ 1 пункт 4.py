@@ -1,7 +1,12 @@
-number = input("Enter number: ")
+number = int(input("Введите целое положительное число: "))
 
-x = 0
-for y in number:
-    while int(y) > x:
-        x = int(y)
-print(x)
+maximum = number % 10
+while number >= 1:
+    number = number // 10
+    if number % 10 > maximum:
+        maximum = number % 10
+    if number > 9:
+        continue
+    else:
+        print("Максимальное цифра в числе: ", maximum)
+    break
