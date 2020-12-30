@@ -1,0 +1,20 @@
+my_file = open("text_2.txt", "r")
+content = my_file.read()
+print(f'Содержимое документа: \n {content}')
+
+my_file = open('text_2.txt', 'r')
+content = my_file.readlines()
+print(f'Количество строк в документе - {len(content)}')
+
+my_file = open('text_2.txt', 'r')
+string = my_file.readline()
+string = string.split()
+print(f'Общее количество слов в строке 1  - {len(string)}')
+string = my_file.readline()
+string = string.split()
+print(f'Общее количество слов в строке 2  - {len(string)}')
+string = my_file.readline()
+string = string.split()
+print(f'Общее количество слов в строке 3  - {len(string)}')
+
+my_file.close()
